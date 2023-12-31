@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike Shoe Showcase</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .product-info-container {
+            background: linear-gradient(to right, #ddd, #666); 
+            display: flex;
+            justify-content: space-between;
+            color: #fff; 
+            margin-bottom: 20px;
+            overflow: hidden; 
+        }
+
+        .left-part {
+            max-width: 600px;
+            padding: 20px;
+            flex-grow: 1; 
+            text-align: center; 
+        }
+
+        .right-part {
+            max-width: 300px;
+            padding-right: 150px;
+            padding-top:30px
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+            max-height: 800px; 
+            margin-top: 20px;
+        }
+
+        .product-info,
+        .additional-info {
+            text-align: left; 
+            margin-left:100px ;
+        }
+
+        .additional-info a {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff; 
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nike Shoe Showcase</h1>
+    </header>
+
+    <div class="container">
+        <div class="product-info-container">
+            <div class="left-part">
+                <div class="product-info">
+                    <h2 style="color: #333; margin-bottom: 20px;text-align:center;">Nike <em>Air Max</em></h2>
+                    <div class="product">
+                        <img src="nike_shoe.jpg" alt="Nike Shoe" width="453.5px" height="307">
+                    </div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                        Nulla ultricies mauris nec eros convallis, in mattis justo 
+                        cursus. Curabitur at diam sit amet metus bibendum cursus.
+                    </p>
+                    <p><strong>Price:</strong> $150</p>
+                    <button>Add to Cart</button> <br><br>
+                    <address>
+                        Address of the Nike Store<br>
+                        City, Country
+                    </address>
+                </div>
+            </div>
+            <div class="right-part">
+                <div class="additional-info">
+                    <p>
+                        Hyperlinks brenda HTML faqes: <a href="#">Click me</a><br>
+                        Hyperlink për tek një URL tjetër: <a href="https://www.example.com">Visit Example.com</a><br>
+                        Hyperlink për tek një fajll që mund të hapet në shfletues: <a href="path/to/your/file.pdf" download>Download File</a><br>
+                        Hyperlink që hapet në tab të ri: <a href="https://www.example.com" target="_blank">Visit Example.com in a new tab</a><br>
+                        Përdorimi i atributit 'id' në linqe: <a href="#section">Go to Section</a><br>
+                        Përdorimi i hyperlinkut për të dërguar email: <a href="mailto:info@example.com">Send Email</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <ul>
+            <li>Features of Nike Mag-s - Back to the Future:
+                <ul>
+                    <li>Limited Edition Design</li>
+                    <li>Auto-lacing Technology</li>
+                    <li>LED Lights on the Sole</li>
+                    <li>Inspired by Back to the Future</li>
+                </ul>
+            </li>
+
+            <li>Specifications:
+                <ol>
+                    <li>Color: Gray</li>
+                    <li>Material: Synthetic Leather</li>
+                    <li>Technology: Power-Lacing</li>
+                    <li>Sole: Rubber with LED Lights</li>
+                </ol>
+            </li>
+
+            <li>Additional Details:
+                <ul>
+                    <li>Released in 2011</li>
+                    <li>Featured in Back to the Future II</li>
+                    <li>Benefiting the Michael J. Fox Foundation for Parkinson's Research</li>
+                </ul>
+            </li>
+
+            <li>History and Innovation:
+                <ul>
+                    <li>Designed for the Movie Back to the Future II</li>
+                    <li>Revolutionary Auto-Lacing Technology</li>
+                    <li>Collectors' Item for Sneaker Enthusiasts</li>
+                </ul>
+            </li>
+
+            <li>Technology Breakdown:
+                <dl>
+                    <dt>Power-Lacing</dt>
+                    <dd>The Nike Mag-s features an innovative power-lacing system that automatically tightens the shoe around the foot.</dd>
+
+                    <dt>LED Lights</dt>
+                    <dd>The sole of the shoe is equipped with LED lights, creating a futuristic and visually striking design.</dd>
+
+                    <dt>Back to the Future Inspiration</dt>
+                    <dd>Inspired by the iconic self-lacing shoes worn by Marty McFly in the movie Back to the Future II.</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
