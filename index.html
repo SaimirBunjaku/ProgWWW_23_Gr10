@@ -15,60 +15,72 @@
         header {
             background-color: #333;
             color: #fff;
-            text-align: center;
-            padding: 1em 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1em 20px;
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 1em;
+            text-align: right;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #8C8C8C;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         .product-info-container {
-            background: linear-gradient(to right, #ddd, #666); 
+            background: linear-gradient(to right, #ddd, #666);
             display: flex;
             justify-content: space-between;
-            color: #fff; 
+            color: #fff;
             margin-bottom: 20px;
-            overflow: hidden; 
+            overflow: hidden;
+            width: 100%;
         }
 
-        .left-part {
-            max-width: 600px;
+        .left-part, .right-part {
+            flex: 1;
             padding: 20px;
-            flex-grow: 1; 
-            text-align: center; 
-        }
-
-        .right-part {
-            max-width: 300px;
-            padding-right: 150px;
-            padding-top:30px
+            box-sizing: border-box;
         }
 
         .product img {
             max-width: 100%;
             height: auto;
-            max-height: 800px; 
+            max-height: 800px;
             margin-top: 20px;
         }
 
         .product-info,
         .additional-info {
-            text-align: left; 
-            margin-left:100px ;
+            text-align: left;
+            margin-left: 100px;
         }
 
         .additional-info a {
             display: block;
             margin-bottom: 10px;
-            color: #fff; 
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
+            color: #fff;
         }
 
         button {
@@ -79,11 +91,122 @@
             cursor: pointer;
             font-size: 1em;
         }
+
+        .lists {
+            font-family: 'Arial', sans-serif;
+            font-size: 16px;
+            display: flex;
+            margin-left: 109px;
+            margin-right: 109px;
+            background: linear-gradient(to right, #666666, #CCCCCC);
+            color: #ffffff;
+        }
+
+        .lists ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            width: 50%;
+        }
+
+        .lists li {
+            margin-bottom: 10px;
+        }
+
+        .lists ol,
+        .lists ul {
+            margin-left: 20px;
+        }
+
+        .lists dl {
+            margin-left: 40px;
+        }
+
+        .lists dt {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .lists dd {
+            margin-bottom: 10px;
+        }
+
+        .lists img {
+            max-width: 100%;
+            height: auto;
+            width: 50%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .tabelat{
+            background-color: #b8b8b8;
+            margin:45px;
+            color: white;
+            margin-left: 109px;
+            margin-right: 109px;
+        }
+        .tabelat th{
+            color: black;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            width: 1479 px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer p {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        footer .links {
+            text-align: right;
+            padding-right: 40px;
+        }
+
+        footer .links a {
+            display: block;
+            margin-bottom: 5px;
+            color: #8C8C8C;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer .links a:hover {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1>Nike Shoe Showcase</h1>
+        <h1 style="margin: 0;">Nike Shoe Showcase</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact</a>
+        </nav>
     </header>
 
     <div class="container">
@@ -115,16 +238,16 @@
                         Hyperlink për tek një fajll që mund të hapet në shfletues: <a href="path/to/your/file.pdf" download>Download File</a><br>
                         Hyperlink që hapet në tab të ri: <a href="https://www.example.com" target="_blank">Visit Example.com in a new tab</a><br>
                         Përdorimi i atributit 'id' në linqe: <a href="#section">Go to Section</a><br>
-                        Përdorimi i hyperlinkut për të dërguar email: <a href="mailto:info@example.com">Send Email</a>
+                        Përdorimi i hyperlinkut për të dërguar email: <a href="mailto:saimir.bunjaku@student.uni-pr.edu">Send Email</a>
                     </p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container">
+    <div class="lists">
         <ul>
-            <li>Features of Nike Mag-s - Back to the Future:
+            <li><br>Features of Nike Mag-s - Back to the Future:
                 <ul>
                     <li>Limited Edition Design</li>
                     <li>Auto-lacing Technology</li>
@@ -171,6 +294,87 @@
                 </dl>
             </li>
         </ul>
+
+        <img src="air_mag.jpg" alt="Air Mag" style="max-width: 100%; height: 760px; width: 50%;">
     </div>
+<br><br>
+        <h1 style="text-align: center;">Additional Info.</h1>
+    <div class="tabelat">
+        <table style="width: 48%; float: left; margin-right: 2%;margin-top:10px;">
+            <tr>
+                <th>Feature</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Model</td>
+                <td>Nike Air Mag - Back to the Future</td>
+            </tr>
+            <tr>
+                <td>Design</td>
+                <td>Limited Edition Design</td>
+            </tr>
+            <tr>
+                <td>Technology</td>
+                <td>Auto-lacing Technology</td>
+            </tr>
+            <tr>
+                <td>Lighting</td>
+                <td>LED Lights on the Sole</td>
+            </tr>
+        </table>
+
+        <table style="width: 48%; float: left; margin-top:15px;">
+            <tr>
+                <td>Nike Air Mag</td>
+                <td>Revolutionary sneaker inspired by Back to the Future</td>
+            </tr>
+            <tr>
+                <td>Auto-lacing Technology</td>
+                <td>The shoe features an innovative power-lacing system</td>
+            </tr>
+        </table>
+
+        <table style="width: 48%; float: left; margin-right: 2%;">
+            <tr>
+                <td>Limited Edition Design</td>
+                <td>Exclusive design paying homage to Back to the Future</td>
+            </tr>
+            <tr>
+                <td>LED Lights on the Sole</td>
+                <td>The sole is equipped with futuristic LED lights</td>
+            </tr>
+        </table>
+
+        <div style="padding: 20px; text-align: center;">
+            <table style="width: 60%; margin: 0 auto;">
+                <tr>
+                    <th>Characteristic</th>
+                    <th>Details</th>
+                    <th>Additional Information</th>
+                </tr>
+                <tr>
+                    <td>Released Year</td>
+                    <td>2011</td>
+                    <td>Featured in Back to the Future II</td>
+                </tr>
+                <tr>
+                    <td>Material</td>
+                    <td>Synthetic Leather</td>
+                    <td>Benefiting the Michael J. Fox Foundation</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="left-section">
+            <p>&copy; 2023 Nike Shoe Showcase. All rights reserved.</p>
+        </div>
+        <div class="right-section links">
+            <a href="#">Privacy Policy</a><br>
+            <a href="#">Terms of Service</a><br>
+            <a href="#">Contact Us</a>
+        </div>
+    </footer>
 </body>
 </html>
