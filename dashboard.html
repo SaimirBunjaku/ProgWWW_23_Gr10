@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nike Shoe Showcase</title>
     <style>
+        html {
+             scroll-behavior: smooth;
+        }   
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -29,7 +32,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            padding-left: 20px; /* Added padding-left for space */
+            padding-left: 20px;
         }
 
         nav a {
@@ -44,12 +47,11 @@
             color: #8C8C8C;
         }
 
-        /* Added styles for Log In and Register buttons */
         .auth-links {
             margin-left: auto;
             display: flex;
             align-items: center;
-            padding-left: 20px; /* Added padding-left for space */
+            padding-left: 20px;
         }
 
         .auth-links a {
@@ -95,6 +97,10 @@
             flex: 1;
             padding: 20px;
             box-sizing: border-box;
+        }
+
+        .right-part{
+            margin-top:70px;
         }
 
         .product img {
@@ -243,10 +249,10 @@
 <body>
 
     <header>
-        <h1 style="margin: 0; ">Nike Shoe Showcase</h1>
+        <a href="dashboard.html" style="text-decoration: none; color: #fff;"><h1 style="margin: 0; ">Nike Shoe Showcase</h1></a>
         <nav>
             <a href="#">Home</a>
-            <a href="#">Products</a>
+            <a href="#features">Features</a>
             <a href="#">About Us</a>
             <a href="#">Contact</a>
             <div class="auth-links">
@@ -280,12 +286,10 @@
             <div class="right-part">
                 <div class="additional-info">
                     <p>
-                        Hyperlinks brenda HTML faqes: <a href="#">Click me</a><br>
-                        Hyperlink për tek një URL tjetër: <a href="https://www.example.com">Visit Example.com</a><br>
-                        Hyperlink për tek një fajll që mund të hapet në shfletues: <a href="path/to/your/file.pdf" download>Download File</a><br>
-                        Hyperlink që hapet në tab të ri: <a href="https://www.example.com" target="_blank">Visit Example.com in a new tab</a><br>
-                        Përdorimi i atributit 'id' në linqe: <a href="#section">Go to Section</a><br>
-                        Përdorimi i hyperlinkut për të dërguar email: <a href="mailto:saimir.bunjaku@student.uni-pr.edu">Send Email</a>
+                        Go to the official NIKE page: <a href="https://www.nike.com">Visit Nike</a><br>
+                        Read more about Nike Mags: <a href="https://en.wikipedia.org/wiki/Nike_Mag.com" target="_blank">Nike Mags - On a new tab</a><br>
+                        Go to see additional info: <a href="#additionalinfo">Go to Section</a><br>
+                        Click here to send an email to the owner: <a href="mailto:saimir.bunjaku@student.uni-pr.edu">Send Email</a>
                     </p>
                 </div>
             </div>
@@ -294,7 +298,7 @@
 </main>
 
 <aside>
-    <div class="lists">
+    <div class="lists" id="features">
         <ul>
             <li><br>Features of Nike Mag-s - Back to the Future:
                 <ul>
@@ -354,7 +358,7 @@
 </center>
 </div>
 <section>
-    <div class="tabelat">
+    <div class="tabelat" id="additionalinfo">
         <table cellspacing="10" style="width: 48%; float: left; margin-right: 2%;margin-top:10px;">
             <tr>
                 <th>Feature</th>
@@ -427,7 +431,7 @@
         <p>&copy; 2023 Nike Shoe Showcase. All rights reserved.</p>
     </div>
     <div class="right-section links">
-        <a href="#">Privacy Policy</a><br>
+        <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect" target="_blank">Privacy Policy</a><br>
         <a href="#">Terms of Service</a><br>
         <a href="#">Contact Us</a>
     </div>
