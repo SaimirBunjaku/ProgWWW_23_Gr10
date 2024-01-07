@@ -254,7 +254,7 @@
             <a href="#">Home</a>
             <a href="#features">Features</a>
             <a href="#">About Us</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
             <div class="auth-links">
                 <a id="logout-btn" href="index.html">Log out</a>
             </div>
@@ -276,7 +276,7 @@
                         cursus. Curabitur at diam sit amet metus bibendum cursus.
                     </p>
                     <p><strong>Price:</strong> $150</p>
-                    <button>Add to Cart</button> <br><br>
+                    <button id="addToCartBtn" onclick="addToCart()">Add to Cart</button> <br><br>
                     <address>
                         Address of the Nike Store<br>
                         City, Country
@@ -432,10 +432,27 @@
     </div>
     <div class="right-section links">
         <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect" target="_blank">Privacy Policy</a><br>
-        <a href="#">Terms of Service</a><br>
-        <a href="#">Contact Us</a>
+        <a href="https://agreementservice.svs.nike.com/us/en_us/rest/agreement?agreementType=termsOfUse&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect" target="_blank">Terms of Service</a><br>
+        <a href="contact.html">Contact Us</a>
     </div>
 </footer>
 
+<script>
+    let isInCart = false;
+
+    function addToCart() {
+        const cartButton = document.getElementById('addToCartBtn');
+
+        if (isInCart) {
+            alert('Removed from cart');
+            cartButton.innerText = 'Add to Cart';
+        } else {
+            alert('Added to cart');
+            cartButton.innerText = 'Remove from Cart';
+        }
+
+        isInCart = !isInCart;
+    }
+</script>
 </body>
 </html>

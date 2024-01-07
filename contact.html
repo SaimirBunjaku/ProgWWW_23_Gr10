@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Nike Shoe Showcase</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background: url("logo.png");
+            background-repeat: repeat;
+            background-size: cover;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+        }
+
+        header a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        header nav {
+            margin-left: auto;
+        }
+
+        .form-container {
+            background-color: #eee;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+        }
+
+        header nav a {
+            margin-right: 15px; 
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-dark text-white p-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="dashboard.html" class="text-white text-decoration-none"><h1 class="m-0">Nike Shoe Showcase</h1></a>
+            <nav class="d-flex">
+                <a href="dashboard.html" class="text-white">Home</a>
+                <a href="#" class="text-white">About Us</a>
+                <a href="#" class="text-white">Contact</a>
+                <div class="auth-links ml-auto">
+                    <a id="logout-btn" href="index.html" class="text-white">Log out</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Form -->
+    <div class="container mt-5 form-container">
+        <form>
+             <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Contact Reason:</label>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="reason1" name="contactReason" value="Inquiry" checked>
+                    <label class="form-check-label" for="reason1">General Inquiry</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" class="form-check-input" id="reason2" name="contactReason" value="Support">
+                    <label class="form-check-label" for="reason2">Customer Support</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Additional Options:</label>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="option1" name="additionalOption[]" value="Newsletter">
+                    <label class="form-check-label" for="option1">Subscribe to Newsletter</label>
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="option2" name="additionalOption[]" value="Promotions">
+                    <label class="form-check-label" for="option2">Receive Promotions</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-secondary" onclick="clearForm()">Clear</button>
+        </form>
+    </div>
+
+    <footer class="bg-dark text-white p-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2023 Nike Shoe Showcase. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect" target="_blank" class="text-white">Privacy Policy</a><br>
+                    <a href="https://agreementservice.svs.nike.com/us/en_us/rest/agreement?agreementType=termsOfUse&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect" target="_blank" class="text-white">Terms of Service</a><br>
+                    <a href="#" class="text-white">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script>
+        function clearForm() {
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.querySelector('input[name="contactReason"][value="Inquiry"]').checked = true;
+            document.querySelectorAll('input[name="additionalOption[]"]').forEach(checkbox => checkbox.checked = false);
+            document.getElementById("message").value = "";
+        }
+    </script>
+
+</body>
+</html>

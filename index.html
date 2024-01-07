@@ -32,7 +32,7 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            padding-left: 20px; /* Added padding-left for space */
+            padding-left: 20px; 
         }
 
         nav a {
@@ -47,12 +47,11 @@
             color: #8C8C8C;
         }
 
-        /* Added styles for Log In and Register buttons */
         .auth-links {
             margin-left: auto;
             display: flex;
             align-items: center;
-            padding-left: 20px; /* Added padding-left for space */
+            padding-left: 20px; 
         }
 
         .auth-links a {
@@ -259,12 +258,12 @@
 <body>
 
     <header>
-        <a href="index.html" style="text-decoration: none; color: #fff;"><h1 style="margin: 0; ">Nike Shoe Showcase</h1></a>
+        <a href="index.html" style="text-decoration: none; color: #fff;"><h1 style="margin: 0; "><span>Nike Shoe Showcase</span></h1></a>
         <nav>
             <a href="#container">Home</a>
             <a href="#features">Features</a>
             <a href="#">About Us</a>
-            <a href="#">Contact</a>
+            <a href="contact.html">Contact</a>
             <div class="auth-links">
                 <a id="register-btn" href="register.html">Register</a>
                 <a id="login-btn" href="login.html">Log In</a>
@@ -287,7 +286,7 @@
                         cursus. Curabitur at diam sit amet metus bibendum cursus.
                     </p>
                     <p><strong>Price:</strong> $150</p>
-                    <button>Add to Cart</button> <br><br>
+                    <button id="addToCartBtn" onclick="addToCart()">Add to Cart</button> <br><br>
                     <address>
                         Address of the Nike Store<br>
                         City, Country
@@ -444,10 +443,18 @@
     </div>
     <div class="right-section links">
         <a href="https://agreementservice.svs.nike.com/rest/agreement?agreementType=privacyPolicy&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect" target="_blank">Privacy Policy</a><br>
-        <a href="#">Terms of Service</a><br>
-        <a href="#">Contact Us</a>
+        <a href="https://agreementservice.svs.nike.com/us/en_us/rest/agreement?agreementType=termsOfUse&uxId=com.nike.commerce.nikedotcom.web&country=US&language=en&requestType=redirect" target="_blank">Terms of Service</a><br>
+        <a href="contact.html">Contact Us</a>
     </div>
 </footer>
+
+<script>
+    
+
+    function addToCart() {
+        alert("Please log in to shop!")
+    }
+</script>
 
 </body>
 </html>
